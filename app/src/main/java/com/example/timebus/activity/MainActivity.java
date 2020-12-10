@@ -31,5 +31,19 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void onClick2(View view) {
+        Intent miIntent = null;
+        switch (view.getId())
+        {
+            case R.id.btnColaborador:
+                miIntent = new Intent(MainActivity.this, VLogin.class);
+                break;
+        }
+        if (miIntent != null)
+        {
+            startActivity(miIntent);
+        }
+    }
+
 
 }

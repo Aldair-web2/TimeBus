@@ -156,6 +156,7 @@ public class VSeleccionOriDest extends AppCompatActivity {
             }
             if (miIntent != null)
             {
+                miIntent.putExtra("pasardatos",ciudad_origen);
                 startActivity(miIntent);
             }
         }
@@ -164,19 +165,20 @@ public class VSeleccionOriDest extends AppCompatActivity {
 
     }
 
-    /*public void clickLocTerminal(View view) {
+    public void onClick(View view)
+    {
         Intent miIntent = null;
         switch (view.getId())
         {
-            case R.id.btnInicio:
-                miIntent = new Intent(VSeleccionOriDest.this,VSeleccionTerminal.class);
+            case R.id.btnInfoRutas:
+                miIntent = new Intent(VSeleccionOriDest.this, VConsultaFB.class);
                 break;
         }
         if (miIntent != null)
         {
             startActivity(miIntent);
         }
-    }*/
+    }
 
 
 
